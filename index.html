@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Facturacion — Gestiona ventas, compras y paquetes en un solo lugar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="assets/img/sf-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grain"></div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">
+      <img class="logo-icon" src="assets/img/sf-icon.png" alt="Sistemas Fajardo">
+      <span class="l-text"><span class="brand">SISTEMAS FAJARDO</span><span class="product">Sistema Facturacion</span></span>
+    </div>
+    <nav class="nav-links">
+      <a href="#modulos">Módulos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#precios">Precios</a>
+      <a href="https://sistema-facturacion-gttt.onrender.com/login/" target="_blank" rel="noopener">Iniciar sesión</a>
+    </nav>
+    <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Cambiar a modo oscuro" title="Cambiar tema">
+      <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+    </button>
+    <a href="#contacto" class="btn btn-primary">Solicitar cotización</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div>
+      <div class="eyebrow">Plataforma de gestión de negocio</div>
+      <h1>Ventas, compras y productos bajo un mismo folio.</h1>
+      <p class="lead">Un sistema para llevar el control de tu operación diaria: facturas, inventario y el seguimiento de cada transacción, desde su ingreso hasta su salida — sin hojas de cálculo sueltas.</p>
+      <div class="hero-cta">
+        <a href="#contacto" class="btn btn-primary">Solicitar cotización</a>
+        <a href="https://sistema-facturacion-gttt.onrender.com/login/" target="_blank" rel="noopener" class="btn btn-ghost">Ver sistema en vivo ↗</a>
+      </div>
+    </div>
+
+    <div class="invoice-carousel reveal">
+      <div class="ticket">
+        <div class="ticket-head">
+          <div>
+            <div class="inv-brand-name">FERRETERÍA SAN MIGUEL</div>
+            <div class="inv-brand-meta">RTN 0801-1985-123456 · Comayagüela, Honduras</div>
+          </div>
+          <div class="inv-doc">
+            <div class="inv-doc-title">FACTURA</div>
+            <div class="inv-doc-num">N.º 000-001-01-00000284</div>
+          </div>
+        </div>
+
+        <div class="inv-cai">
+          <div><span>CAI</span><span class="mono">4F8A2B-91C3D0-77E1F4-A290BC</span></div>
+          <div><span>Rango autorizado</span><span class="mono">00000001 – 00050000</span></div>
+          <div><span>Fecha límite emisión</span><span class="mono">31/12/2026</span></div>
+        </div>
+
+        <div class="inv-client">
+          <div><span>Cliente</span>Comercial del Valle</div>
+          <div><span>RTN</span>0801-1990-654321</div>
+        </div>
+
+        <table class="inv-table">
+          <thead><tr><th>Cant.</th><th>Descripción</th><th>P. Unit.</th><th>Importe</th></tr></thead>
+          <tbody>
+            <tr><td>2</td><td>Cemento gris 42.5 kg</td><td>185.00</td><td>370.00</td></tr>
+            <tr><td>1</td><td>Taladro percutor 1/2"</td><td>1,450.00</td><td>1,450.00</td></tr>
+            <tr><td>10</td><td>Tubo PVC 1"</td><td>45.00</td><td>450.00</td></tr>
+          </tbody>
+        </table>
+
+        <div class="inv-totals">
+          <div><span>Subtotal</span><span>L. 2,270.00</span></div>
+          <div><span>ISV 15%</span><span>L. 340.50</span></div>
+          <div class="inv-total-final"><span>Total</span><span>L. 2,610.50</span></div>
+        </div>
+
+        <div class="inv-foot">La factura es beneficio de todos. Exíjala.</div>
+        <div class="inv-credit"><span>Generado con</span><img src="assets/img/sf-logo-horizontal.png" alt="Sistemas Fajardo"></div>
+      </div>
+
+      <div class="ticket is-hidden">
+        <div class="ticket-head">
+          <div>
+            <div class="inv-brand-name">SUPERMERCADO LA CANASTA</div>
+            <div class="inv-brand-meta">RTN 0501-2002-987654 · San Pedro Sula, Honduras</div>
+          </div>
+          <div class="inv-doc">
+            <div class="inv-doc-title">FACTURA</div>
+            <div class="inv-doc-num">N.º 000-002-01-00014732</div>
+          </div>
+        </div>
+
+        <div class="inv-cai">
+          <div><span>CAI</span><span class="mono">7B21DA-4C09EE-13F5A2-D8607B</span></div>
+          <div><span>Rango autorizado</span><span class="mono">00000001 – 00100000</span></div>
+          <div><span>Fecha límite emisión</span><span class="mono">30/09/2026</span></div>
+        </div>
+
+        <div class="inv-client">
+          <div><span>Cliente</span>Consumidor Final</div>
+          <div><span>RTN</span>N/D</div>
+        </div>
+
+        <table class="inv-table">
+          <thead><tr><th>Cant.</th><th>Descripción</th><th>P. Unit.</th><th>Importe</th></tr></thead>
+          <tbody>
+            <tr><td>3</td><td>Arroz extra 5 lb</td><td>48.50</td><td>145.50</td></tr>
+            <tr><td>2</td><td>Leche entera 1 lt</td><td>32.00</td><td>64.00</td></tr>
+            <tr><td>1</td><td>Detergente líquido 1 lt</td><td>95.00</td><td>95.00</td></tr>
+            <tr><td>4</td><td>Refresco 600 ml</td><td>18.50</td><td>74.00</td></tr>
+          </tbody>
+        </table>
+
+        <div class="inv-totals">
+          <div><span>Subtotal exento</span><span>L. 209.50</span></div>
+          <div><span>Subtotal gravado 15%</span><span>L. 169.00</span></div>
+          <div><span>ISV 15%</span><span>L. 25.35</span></div>
+          <div class="inv-total-final"><span>Total</span><span>L. 403.85</span></div>
+        </div>
+
+        <div class="inv-foot">La factura es beneficio de todos. Exíjala.</div>
+        <div class="inv-credit"><span>Generado con</span><img src="assets/img/sf-logo-horizontal.png" alt="Sistemas Fajardo"></div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <button class="dot active" data-index="0" aria-label="Ver factura de ferretería"></button>
+      <button class="dot" data-index="1" aria-label="Ver factura de supermercado"></button>
+    </div>
+  </section>
+
+  <section id="modulos" class="wrap">
+    <div class="section-head reveal">
+      <h2>16 módulos. Activas sólo los que tu negocio necesita.</h2>
+      <p>Cada módulo se enciende o apaga según tu rubro — una ferretería no paga por restaurante, un taller no paga por control de obra. Por eso el precio se cotiza a la medida.</p>
+    </div>
+    <div class="mod-groups">
+
+      <div class="mod-group reveal">
+        <div class="mod-group-title">Operación diaria</div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Ventas</div><div class="mi-desc">Facturación con CAI y todo el flujo para cerrar una venta rápido y fácil.</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Cotizaciones</div><div class="mi-desc">Cotiza productos ya existentes en tu inventario — ideal para ferreterías.</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Caja</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Inventario</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Productos</div></div>
+        </div>
+      </div>
+
+      <div class="mod-group reveal">
+        <div class="mod-group-title">Compras y gente</div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Compras</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Proveedores</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Clientes</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Empleados</div></div>
+        </div>
+      </div>
+
+      <div class="mod-group reveal">
+        <div class="mod-group-title">Dinero y control</div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Cuentas</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Finanzas</div><div class="mi-desc">Margen de ganancia total y por producto, con ranking automático de productos.</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Reportes</div></div>
+        </div>
+      </div>
+
+      <div class="mod-group reveal">
+        <div class="mod-group-title">Por tipo de negocio</div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Servicios</div><div class="mi-desc">Para talleres de todo tipo.</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Paquetes</div><div class="mi-desc">Para negocios que reciben paquetes del exterior — múltiples tracking por envío.</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Restaurante</div></div>
+        </div>
+        <div class="mod-item">
+          <span class="mod-check"></span>
+          <div><div class="mi-name">Control de obra</div><div class="mi-desc">Para quienes construyen y quieren llevar el control de todos los gastos de la obra.</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="como-funciona" class="wrap">
+    <div class="section-head reveal">
+      <h2>Cómo empiezas a usarlo</h2>
+      <p>Tres pasos, sin curva de aprendizaje larga.</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Cuéntanos tu operación</h3>
+        <p>Qué vendes, cómo compras y cómo manejas tus envíos hoy.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Configuramos tu sistema</h3>
+        <p>Ajustamos módulos, usuarios y permisos a tu forma de trabajar.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Empiezas a facturar</h3>
+        <p>Tu equipo entra y empieza a registrar ventas, compras y paquetes desde el primer día.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" class="wrap">
+    <div class="pricing">
+      <div class="stamp-wrap reveal">
+        <div class="stamp">
+          <div class="stamp-text">Cotización<br>a medida</div>
+        </div>
+      </div>
+      <div class="pricing-copy reveal">
+        <h2>El precio depende de tu operación, no al revés.</h2>
+        <p>No hay un plan único porque no hay dos negocios iguales: el número de usuarios, el volumen de paquetes y los módulos que necesitas cambian el costo. Cuéntanos cómo trabajas y te regresamos una cotización real.</p>
+        <div class="pricing-points">
+          <div><span class="m">＋</span> Sin costos ocultos por módulo</div>
+          <div><span class="m">＋</span> Ajustado al tamaño de tu equipo</div>
+          <div><span class="m">＋</span> Respuesta con cotización en menos de 48 horas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="wrap">
+    <div class="contact-card reveal">
+      <img class="contact-brand" src="assets/img/sf-logo-horizontal.png" alt="Sistemas Fajardo">
+      <h2>Solicita tu cotización</h2>
+      <p>Escríbenos los datos de tu negocio y te contactamos con una propuesta. También puedes llamarnos o escribirnos directo al <a href="https://wa.me/50487792746" target="_blank" rel="noopener" style="color:var(--mustard-dim);font-weight:600;">504-8779-2746</a>.</p>
+      <form id="quote-form">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="Nombre" type="text" required>
+        </div>
+        <div>
+          <label for="negocio">Negocio</label>
+          <input id="negocio" name="Negocio" type="text" required>
+        </div>
+        <div class="full">
+          <label for="contacto-medio">Correo o WhatsApp</label>
+          <input id="contacto-medio" name="Contacto" type="text" required>
+        </div>
+        <div class="full">
+          <label for="mensaje">Cuéntanos qué necesitas</label>
+          <textarea id="mensaje" name="Mensaje" placeholder="Ej: vendo por catálogo, manejo envíos a Honduras, somos 3 personas..."></textarea>
+        </div>
+        <div class="full actions">
+          <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+          <span class="form-note">Se abrirá WhatsApp con tus datos listos para enviar.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="f-logo"><img src="assets/img/sf-icon.png" alt="">© 2026 Sistemas Fajardo</div>
+  <div class="f-links">
+    <a href="#modulos">Módulos</a>
+    <a href="#precios">Precios</a>
+    <a href="https://wa.me/50487792746" target="_blank" rel="noopener">504-8779-2746</a>
+    <a href="https://sistema-facturacion-gttt.onrender.com/login/" target="_blank" rel="noopener">Iniciar sesión</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
