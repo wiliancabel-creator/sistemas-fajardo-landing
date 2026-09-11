@@ -58,8 +58,8 @@ const navToggle = document.getElementById('nav-toggle');
       const nombre = document.getElementById('nombre').value.trim();
       const negocio = document.getElementById('negocio').value.trim();
       const contacto = document.getElementById('contacto-medio').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
-      const texto = `Hola, quiero cotizar sistema_facturacion.\nNombre: ${nombre}\nNegocio: ${negocio}\nContacto: ${contacto}\nNecesito: ${mensaje}`;
+      const mensaje = document.getElementById('mensaje').value.trim() || 'Sin detalles adicionales.';
+      const texto = `🧾 *Nueva solicitud de cotización*\n_Sistema Facturación · Sistemas Fajardo_\n\n*Nombre:* ${nombre}\n*Negocio:* ${negocio}\n*Contacto:* ${contacto}\n\n*Necesita:*\n${mensaje}`;
       window.open('https://wa.me/50487792746?text=' + encodeURIComponent(texto), '_blank');
     });
   }
