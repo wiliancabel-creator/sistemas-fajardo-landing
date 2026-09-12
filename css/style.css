@@ -273,12 +273,16 @@
   }
   .inv-credit span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#9BA1AE;letter-spacing:.03em;}
   .inv-credit img{height:30px;opacity:0.9;}
-  @media(max-width:480px){ .inv-cai{grid-template-columns:1fr 1fr;} .wrap{padding:0 20px;} }
+  @media(max-width:480px){ .inv-cai{grid-template-columns:1fr 1fr;} .wrap{padding:0 26px;} }
   @media(max-width:400px){ .inv-cai{grid-template-columns:1fr;} }
   @media(max-width:700px){
-    section{padding:60px 0;}
-    .hero{padding:48px 0 44px;}
-  }
+      section{padding:60px 0;}
+      .hero{padding:76px 0 44px;}
+      .hero-copy{text-align:center;}
+      .hero-copy .eyebrow{justify-content:center;}
+      .hero-copy h1,.hero-copy p.lead{margin-left:auto;margin-right:auto;}
+      .hero-cta{justify-content:center;}
+    }
 
   /* ---------- section shell ---------- */
   section{position:relative;z-index:1;padding:88px 0;}
